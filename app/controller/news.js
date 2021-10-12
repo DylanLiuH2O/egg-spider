@@ -18,7 +18,7 @@ class NewsController extends Controller {
     const list = await this.ctx.service.news.getNewsContent(aid);
 
     await this.ctx.render('newscontent', {
-      list: list,
+      list,
     });
   }
 }
