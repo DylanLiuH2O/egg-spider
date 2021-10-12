@@ -14,7 +14,7 @@ class NewsController extends Controller {
 
   async content() {
     const aid = this.ctx.query.aid;
-    
+
     const list = await this.ctx.service.news.getNewsContent(aid);
 
     await this.ctx.render('newscontent', {
