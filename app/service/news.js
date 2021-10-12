@@ -9,20 +9,16 @@ class NewsService extends Service {
     const response = await this.ctx.curl(url);
 
     const data = JSON.parse(response.data);
-    // console.log(data);
 
     return data.result;
   }
 
   async getNewsContent(aid) {
     const url = this.config.api + 'appapi.php?a=getPortalArticle&aid=' + aid;
-    // console.log(url);
 
     const response = await this.ctx.curl(url);
-    // console.log(response);
 
     const data = JSON.parse(response.data);
-    // console.log(data.result);
 
     return data.result;
   }
