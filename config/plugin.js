@@ -6,9 +6,8 @@ module.exports = {
   // static: {
   //   enable: true,
   // }
-};
-
-module.exports.ejs = {
-  enable: true,
-  package: 'egg-view-ejs',
+  ejs: {
+    enable: true,
+    package: 'egg-view-ejs',
+  }
 };
