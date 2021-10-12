@@ -5,7 +5,7 @@ const Controller = require('egg').Controller;
 class NewsController extends Controller {
   async index() {
 
-    let newsList = await this.ctx.service.news.getNewsList();
+    const newsList = await this.ctx.service.news.getNewsList();
 
     await this.ctx.render('news', {
       list: newsList,
@@ -13,9 +13,9 @@ class NewsController extends Controller {
   }
 
   async content() {
-    let aid = this.ctx.query.aid;
+    const aid = this.ctx.query.aid;
     
-    let list = await this.ctx.service.news.getNewsContent(aid);
+    const list = await this.ctx.service.news.getNewsContent(aid);
 
     await this.ctx.render('newscontent', {
       list: list,
